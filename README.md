@@ -11,8 +11,8 @@ Don't have time to plan this now so here is ideas:
 * sort by tags/location
 * both cli/qt frontend?
 * SUBTAKS -> MAJOR IMPORTANCE
-** can expand task into subtasks
-** check off inidividual subtasks
+  * can expand task into subtasks
+  * check off inidividual subtasks
 * Prority queue/way to protirize manually and sort by priority
 * Probably save as json or something like that.. pickle maybe
 * reminders (low prioirty)
