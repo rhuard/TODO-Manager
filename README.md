@@ -18,3 +18,5 @@ Don't have time to plan this now so here is ideas:
 * reminders (low prioirty)
 * link between tasks? (low priority -> if require linking subtasks should be sufficent for most)
 * details? can add details or links to websites or something...? (low priority)
+* status as in last status. Could be usefull if blocked or waiting on a task that takes a long time..
+  * eg laundry -> wating on dryer to finish
