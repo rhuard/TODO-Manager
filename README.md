@@ -9,7 +9,7 @@ Don't have time to plan this now so here is ideas:
 * due dates (not priority)
 * tags (Blocked, any other arbitrary tags)
 * sort by tags/location
-* both cli/qt frontend?
+* both cli/qt frontend? [DO CLI FIRST.. finish QT subsystem stuff before making QT front end.... Also this is why I need this]
 * SUBTAKS -> MAJOR IMPORTANCE
   * can expand task into subtasks
   * check off inidividual subtasks
