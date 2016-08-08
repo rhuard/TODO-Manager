@@ -20,3 +20,4 @@ Don't have time to plan this now so here is ideas:
 * details? can add details or links to websites or something...? (low priority)
 * status as in last status. Could be usefull if blocked or waiting on a task that takes a long time..
   * eg laundry -> wating on dryer to finish
+* plug in for PingMe? (this may actually only be a TODO-Manager Pinger. but bassically change status of task eg from waiting or blocked to ready for next action)
