@@ -6,8 +6,8 @@ from tags.tag import Tag
 
 class Backend():
 
-    def __init__():
+    def __init__(self):
         pass
 
     def AddItem(self):
-
+        print("Not implemented yet")
