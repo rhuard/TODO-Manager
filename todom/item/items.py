@@ -1,4 +1,4 @@
-from priority import *
+from priority.priority import *
 from tags.tag import Tag
 
 class Item():
