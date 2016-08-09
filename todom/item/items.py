@@ -1,5 +1,5 @@
-from todom.priority.priority import *
-from todom.tags.tag import Tag
+from priority.priority import *
+from tags.tag import Tag
 
 class Item():
     """

@@ -1,8 +1,8 @@
 #contains the backend bindings for the UIs to import and use
 
-from todom.item.items import Item
-from todom.priority.priority import *
-from todom.tags.tag import Tag
+from item.items import Item
+from priority.priority import *
+from tags.tag import Tag
 
 class Backend():
 
