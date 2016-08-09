@@ -7,7 +7,13 @@ from tags.tag import Tag
 class Backend():
 
     def __init__(self):
-        pass
+        self._items = []
 
-    def AddItem(self):
-        print("Not implemented yet")
+    def AddItem(self, name="Default", location="Default", priority=P_Low):
+        i = Item(name, location, priority)
+        self._items.append(i)
+
+
+    def GetItem(self):
+        return self._items
+

@@ -1,5 +1,5 @@
-from priority.priority import *
-from tags.tag import Tag
+from todom.priority.priority import *
+from todom.tags.tag import Tag
 
 class Item():
     """
@@ -12,7 +12,7 @@ class Item():
         self._priority = priority
         self._tags = []
         self._sub_tasks = []
-        self _completed = False
+        self._completed = False
 
     def ChangeName(self, name):
         successfull = False
