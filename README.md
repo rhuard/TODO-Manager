@@ -1,6 +1,9 @@
 # TODO-Manager
 super-fortnight
 
+Master: [![Build Status](https://travis-ci.org/rhuard/TODO-Manager.svg?branch=master)](https://travis-ci.org/rhuard/TODO-Manager)
+Dev: [![Build Status](https://travis-ci.org/rhuard/TODO-Manager.svg?branch=dev)](https://travis-ci.org/rhuard/TODO-Manager)
+
 # Brain Dump
 Don't have time to plan this now so here is ideas:
 
