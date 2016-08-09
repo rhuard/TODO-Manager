@@ -12,6 +12,7 @@ class Item():
         self._priority = priority
         self._tags = []
         self._sub_tasks = []
+        self _completed = False
 
     def ChangeName(self, name):
         successfull = False
