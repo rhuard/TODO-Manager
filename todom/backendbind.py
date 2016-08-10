@@ -16,3 +16,6 @@ class Backend():
     def GetItem(self):
         return self._items
 
+    def ListItems(self):
+        for i in range(len(self._items)):
+            self._items[i].PrintItem()

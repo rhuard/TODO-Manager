@@ -48,6 +48,10 @@ class Item():
             successfull = True
         return successfull
 
+    def PrintItem(self):
+        print("|" + self._name + "|" + self._location + "|" + \
+                PrintPriorityName(self._priority))
+
     #TODO: Add functionality for:
             # removing tags
             # remove/acces/modify subtasks (probably just going to be another open and edit of tag)

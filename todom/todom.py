@@ -15,9 +15,13 @@ def get_input():
     cmd = input()
     return cmd
 
+def list_items():
+    B.ListItems()
+
 def hel():
     print("h [help]: -> prints this message")
     print("a [add-item] -> starts new item wizard and creates new item for list")
+    print("l [list] -> list items")
     print("exit -> exits program")
 
 def ex():
@@ -28,6 +32,8 @@ cmds = {"a" : add_item,
         "add-item" : add_item,
         "h" : hel,
         "help" : hel,
+        "l" : list_items,
+        "list" : list_items,
         "exit" : ex}
 
 def process(cmd):
