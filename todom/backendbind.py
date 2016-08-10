@@ -9,7 +9,8 @@ class Backend():
         self._items = []
 
     def AddItem(self, name="Default", location="Default", priority=P_Low):
-        i = Item(name, location, priority)
+        index = len(self._items)
+        i = Item(index, name, location, priority)
         self._items.append(i)
 
 
@@ -19,3 +20,6 @@ class Backend():
     def ListItems(self):
         for i in range(len(self._items)):
             self._items[i].PrintItem()
+
+    def CompleteItem(self, index):
+        self._items[index].Complete()
