@@ -1,9 +1,13 @@
 import backendbind as Back
+from priority.priority import *
 
 B = Back.Backend()
 
 def add_item():
-    B.AddItem()
+    name = input("name: ")
+    location = input("location: ")
+    priority = input("priority: ")
+    B.AddItem(name, location, priority)
 
 def get_input():
     print(">>", end = " ")
