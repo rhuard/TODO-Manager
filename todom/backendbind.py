@@ -19,6 +19,11 @@ class Backend():
 
     def ListItems(self):
         for i in range(len(self._items)):
+            if not  self._items[i].Completed():
+                self._items[i].PrintItem()
+
+    def ListAllItems(self):
+        for i in range(len(self._items)):
             self._items[i].PrintItem()
 
     def CompleteItem(self, index):

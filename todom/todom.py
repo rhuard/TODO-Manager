@@ -18,6 +18,9 @@ def get_input():
 def list_items():
     B.ListItems()
 
+def list_all_items():
+    B.ListAllItems()
+
 def complete_item():
     index = int(input("completed item: ").strip())
     B.CompleteItem(index)
@@ -27,6 +30,7 @@ def hel():
     print("h [help]: -> prints this message")
     print("a [add-item] -> starts new item wizard and creates new item for list")
     print("l [list] -> list items")
+    print("la [list all] -> list all items")
     print("c [completed] -> complete an item")
     print("exit -> exits program")
 
