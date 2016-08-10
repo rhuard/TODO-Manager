@@ -11,14 +11,17 @@ def get_input():
     return cmd
 
 def hel():
-    print("Help: ")
-    #TODO: finish this
+    print("h [help]: -> prints this message")
+    print("a [add-item] -> starts new item wizard and creates new item for list")
+    print("exit -> exits program")
 
 def ex():
+    #TODO: put a save in here?
     exit()
 
 cmds = {"a" : add_item,
         "add-item" : add_item,
+        "h" : hel,
         "help" : hel,
         "exit" : ex}
 
@@ -26,7 +29,7 @@ def process(cmd):
     if cmd in cmds:
         cmds[cmd]()
     else:
-        print("unknown command")
+        print("unknown command try h for help")
 
 def main():
     while True:
