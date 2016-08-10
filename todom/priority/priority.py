@@ -37,8 +37,8 @@ def PrintPriorityName(p):
 
 def CheckPriority(p):
     priority = P_Low
-    if p in range(len(priorities.keys())):
+    if p in priorities:
         priority = priorities[p]
 
-    return p
+    return priority
 
