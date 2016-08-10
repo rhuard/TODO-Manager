@@ -44,6 +44,8 @@ cmds = {"a" : add_item,
         "help" : hel,
         "l" : list_items,
         "list" : list_items,
+        "la" : list_all_items,
+        "list all" : list_all_items,
         "c" : complete_item,
         "completed" : complete_item,
         "exit" : ex}
