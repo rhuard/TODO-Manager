@@ -3,7 +3,6 @@
 from priority.priority import *
 from item.items import Item
 
-
 class Backend():
 
     def __init__(self):
