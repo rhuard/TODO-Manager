@@ -1,6 +1,6 @@
-from backendbind import Backend as Back
+import backendbind as Back
 
-B = Back()
+B = Back.Backend()
 
 def add_item():
     B.AddItem()
