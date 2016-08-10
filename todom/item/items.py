@@ -23,6 +23,9 @@ class Item():
             successfull = True
         return successfull
 
+    def Completed(self):
+        return self._completed
+
     def ChangeLocation(self, location):
         successfull = False
         if True == isinstance(name, str):
