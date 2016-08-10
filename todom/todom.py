@@ -1,9 +1,14 @@
-from backendbind import Backend as Back
+import backendbind as Back
+from priority.priority import *
 
-B = Back()
+B = Back.Backend()
 
 def add_item():
-    B.AddItem()
+    name = input("name: ")
+    location = input("location: ")
+    priority = input("priority: ")
+    priority = CheckPriority(priority)
+    B.AddItem(name, location, priority)
 
 def get_input():
     print(">>", end = " ")
@@ -11,14 +16,17 @@ def get_input():
     return cmd
 
 def hel():
-    print("Help: ")
-    #TODO: finish this
+    print("h [help]: -> prints this message")
+    print("a [add-item] -> starts new item wizard and creates new item for list")
+    print("exit -> exits program")
 
 def ex():
+    #TODO: put a save in here?
     exit()
 
 cmds = {"a" : add_item,
         "add-item" : add_item,
+        "h" : hel,
         "help" : hel,
         "exit" : ex}
 
@@ -26,7 +34,7 @@ def process(cmd):
     if cmd in cmds:
         cmds[cmd]()
     else:
-        print("unknown command")
+        print("unknown command try h for help")
 
 def main():
     while True:
