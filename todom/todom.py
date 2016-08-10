@@ -7,6 +7,7 @@ def add_item():
     name = input("name: ")
     location = input("location: ")
     priority = input("priority: ")
+    priority = CheckPriority(priority)
     B.AddItem(name, location, priority)
 
 def get_input():
