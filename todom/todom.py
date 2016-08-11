@@ -1,9 +1,10 @@
 from tabulate import tabulate
 import backendbind as Back
-from consoleUtils.colorutils import *
+from consoleUtils.colorutils import TextDecorator
 from priority.priority import *
 
 B = Back.Backend()
+TD = TextDecorator()
 
 def add_item():
     name = input("name: ")
