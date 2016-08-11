@@ -19,6 +19,7 @@ COLORS = {
 }
 
 #TODO: get faint/bold to work with colors
+#TODO: get changing Background Color to work as well
 
 def MakeFaintText(msg):
     return _Decorate(FAINT, msg)
