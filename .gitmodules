@@ -1,0 +1,3 @@
+[submodule "todom/consoleUtils/PyTextDecorator"]
+	path = todom/consoleUtils/PyTextDecorator
+	url = https://github.com/rhuard/PyTextDecorator.git
