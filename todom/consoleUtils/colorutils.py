@@ -10,7 +10,8 @@ TEXT_STYLE = {
     'faint' : '2',
     'underscore' : '4',
     'reverse_color' : '7',
-    'concealed': 8, #for passwords or something
+    'concealed': '8', #for passwords or something
+    'strikethrough' : '9',
 }
 
 COLORS = {
@@ -55,24 +56,30 @@ def MakeDecoratedText(*args, **kwargs):
         t = kwargs["msg"]
     return t
 
+def _ExpandStyle(style):
+    s = ""
+    for i in range(len(style)):
+        s += TEXT_STYLE[style[i]] + ";"
+    return s[:-1]
+
 def _MakeTwoColorText(color, bcolor, msg):
     t = COLORS[color] + ";" + BACKGROUND_COLORS[bcolor]
     return _Decorate(t, msg)
 
 def _MakeColorStyleText(color, style, msg):
-    t = COLORS[color] + ";" + TEXT_STYLE[style]
+    t = COLORS[color] + ";" + _ExpandStyle(style)
     return _Decorate(t, msg)
 
 def _MakeBColorStyleText(bcolor, style, msg):
-    t = BACKGROUND_COLORS[bcolor] + ";" + TEXT_STYLE[style]
+    t = BACKGROUND_COLORS[bcolor] + ";" + _ExpandStyle(style)
     return _Decorate(t, msg)
 
 def _MakeFancyText( color, bcolor, style, msg):
-    s = TEXT_STYLE[style] + ";" + COLORS[color] + ";" + BACKGROUND_COLORS[bcolor]
+    s = _ExpandStyle(style) + ";" + COLORS[color] + ";" + BACKGROUND_COLORS[bcolor]
     return _Decorate(s, msg)
 
 def _MakeStyleText(style, msg):
-    s = TEXT_STYLE[style]
+    s = _ExpandStyle(style)
     return _Decorate(s, msg)
 
 def _MakeBackColorText(color, msg):
