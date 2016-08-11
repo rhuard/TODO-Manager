@@ -66,6 +66,7 @@ cmds = {"a" : add_item,
         "list all" : list_all_items,
         "c" : complete_item,
         "completed" : complete_item,
+        "q" : ex,
         "exit" : ex}
 
 def process(cmd):
