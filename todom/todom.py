@@ -1,6 +1,6 @@
 from tabulate import tabulate
 import backendbind as Back
-from consoleUtils.colorutils import TextDecorator
+from consoleUtils.textdecorator import TextDecorator
 from priority.priority import *
 
 B = Back.Backend()
