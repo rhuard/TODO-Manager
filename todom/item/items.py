@@ -1,4 +1,3 @@
-import pprint
 from priority.priority import *
 from tags.tag import Tag
 
@@ -23,9 +22,6 @@ class Item():
             successfull = True
         return successfull
 
-    def Completed(self):
-        return self._completed
-
     def ChangeLocation(self, location):
         successfull = False
         if True == isinstance(name, str):
@@ -33,7 +29,7 @@ class Item():
             successfull = True
         return successfull
 
-    def ChangePrioirty(self, priority):
+    def ChangePriority(self, priority):
         #TODO: make sure correct type... this may not happen if just using constants
         self._prioirty = priority
 
@@ -53,15 +49,23 @@ class Item():
             successfull = True
         return successfull
 
-    def PrintItem(self):
-        pp = pprint.PrettyPrinter(indent = 4)
-        stuff = [self._index, self._name, self._location, \
-                PrintPriorityName(self._priority), self._completed]
-        pp.pprint(stuff)
-
     def Complete(self):
         self._completed = True
 
+    def Priority(self):
+        return self._priority
+
+    def Index(self):
+        return self._index
+
+    def Name(self):
+        return self._name
+
+    def Location(self):
+        return self._location
+
+    def Completed(self):
+        return self._completed
     #TODO: Add functionality for:
             # removing tags
             # remove/acces/modify subtasks (probably just going to be another open and edit of tag)

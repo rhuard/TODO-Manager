@@ -14,17 +14,15 @@ class Backend():
         self._items.append(i)
 
 
-    def GetItem(self):
+    def GetAllItems(self):
         return self._items
 
-    def ListItems(self):
+    def GetItems(self):
+        items = []
         for i in range(len(self._items)):
-            if not  self._items[i].Completed():
-                self._items[i].PrintItem()
-
-    def ListAllItems(self):
-        for i in range(len(self._items)):
-            self._items[i].PrintItem()
+            if False == self._items[i].Completed():
+                items.append(self._items[i])
+        return items
 
     def CompleteItem(self, index):
         self._items[index].Complete()

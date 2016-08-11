@@ -1,3 +1,4 @@
+from tabulate import tabulate
 import backendbind as Back
 from priority.priority import *
 
@@ -15,11 +16,26 @@ def get_input():
     cmd = input()
     return cmd
 
+def print_helper(items):
+    header = ["#","Name", "Location", "Priority", "Completed"]
+    table = []
+    for i in range(len(items)):
+        t = [str(items[i].Index())]
+        t.append(items[i].Name())
+        t.append(items[i].Location())
+        t.append(PrintPriorityName(items[i].Priority()))
+        t.append(str(items[i].Completed()))
+        table.append(t)
+
+    print(tabulate(table, headers=header, tablefmt="fancy_grid"))
+
 def list_items():
-    B.ListItems()
+    items = B.GetItems()
+    print_helper(items)
 
 def list_all_items():
-    B.ListAllItems()
+    items = B.GetAllItems()
+    print_helper(items)
 
 def complete_item():
     index = int(input("completed item: ").strip())
