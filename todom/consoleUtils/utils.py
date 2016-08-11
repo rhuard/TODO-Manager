@@ -4,8 +4,14 @@
 ESCAPE = '\033[%sm'
 ENDC = ESCAPE % '0'
 
-BOLD = '1'
-FAINT = '2'
+
+TEXT_STYLE = {
+    'bold' : '1',
+    'faint' : '2',
+    'underscore' : '4',
+    'reverse_color' : '7',
+    'concealed': 8, #for passwords or something
+}
 
 COLORS = {
         'black': '30',
@@ -18,14 +24,32 @@ COLORS = {
         'white': '37',
 }
 
-#TODO: get faint/bold to work with colors
+BACKGROUND_COLORS = {
+        'black' : '40',
+        "red" : '41',
+        'green': '42',
+        'yellow' : '43',
+        'blue' : '44',
+        'magenta' : '45',
+        'cyan':'46',
+        'white':'47',
+        }
+
+def MakeDecoratedText(*args, **kwargs):
+    if 'color' in kwargs:
+        return MakeColorText(kwargs['color'], kwargs['msg'])
+
+
 #TODO: get changing Background Color to work as well
+#TODO: get multiple modifiers happening
 
-def MakeFaintText(msg):
-    return _Decorate(FAINT, msg)
+def MakeStyleText(style, msg):
+    s = TEXT_STYLE[style]
+    return _Decorate(s, msg)
 
-def MakeBoldText(msg):
-    return _Decorate(BOLD, msg)
+def MakeBackColor(color, msg):
+    c = BACKGROUND_COLORS[color]
+    return _Decorate(c, msg)
 
 def MakeColorText(color, msg):
     c = COLORS[color]
@@ -34,5 +58,3 @@ def MakeColorText(color, msg):
 def _Decorate(fmt, msg):
     format_sequence = ESCAPE % fmt
     return format_sequence + msg + ENDC
-
-
