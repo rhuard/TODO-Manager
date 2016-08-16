@@ -52,18 +52,23 @@ class Item():
     def Complete(self):
         self._completed = True
 
+    @property
     def Priority(self):
         return self._priority
 
+    @property
     def Index(self):
         return self._index
 
+    @property
     def Name(self):
         return self._name
 
+    @property
     def Location(self):
         return self._location
 
+    @property
     def Completed(self):
         return self._completed
     #TODO: Add functionality for:
