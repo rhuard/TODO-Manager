@@ -1,3 +1,5 @@
+from PyTextDecorator import *
+
 P_None = -1
 P_Low = 0
 P_Medium = 1
@@ -31,8 +33,12 @@ p_names = {
 def PrintPriorityName(p):
     priority = p_names[P_None]
     if p in p_names:
-        priority = p_names[p]
-
+        if p == P_Low:
+            priority = DecorateText(p_names[p], color='green')
+        elif p == P_Medium:
+            priority = DecorateText(p_names[p], color='yellow')
+        elif p == P_High:
+            priority = DecorateText(p_names[p], color='red')
     return priority
 
 def CheckPriority(p):
