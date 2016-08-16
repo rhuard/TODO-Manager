@@ -1,6 +1,6 @@
 from tabulate import tabulate
 import backendbind as Back
-from consoleUtils.PyTextDecorator.pytextdecorator import TextDecorator
+from PyTextDecorator import *
 from priority.priority import *
 
 B = Back.Backend()
