@@ -4,7 +4,6 @@ from PyTextDecorator import *
 from priority.priority import *
 
 B = Back.Backend()
-TD = TextDecorator()
 
 def add_item():
     name = input("name: ")
