@@ -7,13 +7,13 @@ class Item():
     """
 
     def __init__(self, index, name="Default", location="Default", priority=P_Low):
-        self._name = name
-        self._location = location
-        self._priority = priority
-        self._tags = []
-        self._sub_tasks = []
-        self._completed = False
-        self._index = index
+        self.name = name
+        self.location = location
+        self.priority = priority
+        self.tags = []
+        self.sub_tasks = []
+        self.completed = False
+        self.index = index
 
     def ChangeName(self, name):
         successfull = False
@@ -53,24 +53,53 @@ class Item():
         self._completed = True
 
     @property
-    def Priority(self):
-        return self._priority
+    def priority(self):
+        return self.__priority
+
+    @priority.setter
+    def priority(self, p):
+        self.__priority = p
 
     @property
-    def Index(self):
-        return self._index
+    def index(self):
+        return self.__index
+
+    @index.setter
+    def index(self, index):
+        self.__index = index
 
     @property
-    def Name(self):
-        return self._name
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, name):
+        self.__name = name
 
     @property
-    def Location(self):
-        return self._location
+    def location(self):
+        return self.__location
+
+    @location.setter
+    def location(self, loc):
+        self.__location = loc
 
     @property
-    def Completed(self):
-        return self._completed
+    def completed(self):
+        return self.__completed
+
+    @completed.setter
+    def completed(self,completed):
+        self.__completed = completed
+
+    @property
+    def tags(self):
+        return self.__tags
+
+    @tags.setter
+    def tags(self, tags):
+        self.__tags = tags
+
     #TODO: Add functionality for:
             # removing tags
             # remove/acces/modify subtasks (probably just going to be another open and edit of tag)

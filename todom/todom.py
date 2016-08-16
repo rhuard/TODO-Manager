@@ -21,11 +21,11 @@ def print_helper(items):
     header = ["#","Name", "Location", "Priority", "Completed"]
     table = []
     for i in items:
-        t = [str(i.Index())]
-        t.append(i.Name())
-        t.append(i.Location())
-        t.append(PrintPriorityName(i.Priority()))
-        t.append(str(i.Completed()))
+        t = [str(i.index)]
+        t.append(i.name)
+        t.append(i.location)
+        t.append(PrintPriorityName(i.priority))
+        t.append(str(i.completed))
         table.append(t)
 
     print(tabulate(table, headers=header, tablefmt="fancy_grid"))

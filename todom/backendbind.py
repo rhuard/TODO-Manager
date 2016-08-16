@@ -20,7 +20,7 @@ class Backend():
     def GetItems(self):
         items = []
         for i in self._items:
-            if False == i.Completed():
+            if False == i.completed:
                 items.append(i)
         return items
 
