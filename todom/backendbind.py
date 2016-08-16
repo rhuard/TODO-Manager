@@ -19,9 +19,9 @@ class Backend():
 
     def GetItems(self):
         items = []
-        for i in range(len(self._items)):
-            if False == self._items[i].Completed():
-                items.append(self._items[i])
+        for i in self._items:
+            if False == i.Completed():
+                items.append(i)
         return items
 
     def CompleteItem(self, index):

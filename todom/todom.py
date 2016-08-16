@@ -20,12 +20,12 @@ def get_input():
 def print_helper(items):
     header = ["#","Name", "Location", "Priority", "Completed"]
     table = []
-    for i in range(len(items)):
-        t = [str(items[i].Index())]
-        t.append(items[i].Name())
-        t.append(items[i].Location())
-        t.append(PrintPriorityName(items[i].Priority()))
-        t.append(str(items[i].Completed()))
+    for i in items:
+        t = [str(i.Index())]
+        t.append(i.Name())
+        t.append(i.Location())
+        t.append(PrintPriorityName(i.Priority()))
+        t.append(str(i.Completed()))
         table.append(t)
 
     print(tabulate(table, headers=header, tablefmt="fancy_grid"))
