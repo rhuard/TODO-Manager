@@ -1,5 +1,5 @@
-from TODOManager.todom.backendbind import Backend as Back
-from TODOManager.todom.priority.priority import *
+from TODO-Manager.todom.backendbind import Backend as Back
+from TODO-Manager.todom.priority.priority import *
 
 def test_insert():
     b = Back()
